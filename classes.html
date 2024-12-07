@@ -1,18 +1,27 @@
+class WebPage:
+    def __init__(self, title, image, description):
+        self.title = title
+        self.image = image
+        self.description = description
+
+    def generate_html(self):
+        return f"""
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classes with Fraser</title>
+    <title>{self.title}</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <a href="index.html">Back to Home</a>
+        <a href="index.html" class="back-link">← Back to Home</a>
     </header>
-    <main>
-        <h1>Classes with Fraser</h1>
-        <p>Here is some detailed information about classes with Fraser.</p>
+    <main class="subpage-container">
+        <h1>{self.title}</h1>
+        <img src="images/{self.image}" alt="{self.title}" class="subpage-image">
+        <p>{self.description}</p>
     </main>
     <footer>
         <p>Follow us on:</p>
@@ -20,7 +29,47 @@
         <a href="https://www.twitter.com" target="_blank">Twitter</a>
         <a href="https://www.instagram.com" target="_blank">Instagram</a>
         <a href="https://www.youtube.com/@eslinteractive1648" target="_blank">YouTube</a>
-        <a href="mailto:fraser@eslinteractive.uk">Email Fraser</a>
+        <p>Contact us: <a href="mailto:fraser@eslinteractive.uk">fraser@eslinteractive.uk</a></p>
     </footer>
 </body>
 </html>
+"""
+
+class ClassesPage(WebPage):
+    def __init__(self):
+        super().__init__(
+            title="Classes with Fraser",
+            image="CLASSES.jpg",
+            description="Join Fraser’s engaging and interactive online classes. Designed for all levels and ages, these sessions are tailored to meet individual learning goals."
+        )
+
+class PPTPage(WebPage):
+    def __init__(self):
+        super().__init__(
+            title="PowerPoint Lessons",
+            image="PPTS.jpg",
+            description="Explore our library of ready-to-use PowerPoint presentations, covering diverse topics for learners and educators alike."
+        )
+
+class OETPage(WebPage):
+    def __init__(self):
+        super().__init__(
+            title="OET Preparation",
+            image="OET.jpg",
+            description="Our OET preparation courses are crafted to help healthcare professionals achieve excellence in the Occupational English Test."
+        )
+
+class IELTSPage(WebPage):
+    def __init__(self):
+        super().__init__(
+            title="IELTS Preparation",
+            image="IELTS.jpg",
+            description="Master the IELTS exam with our expert-led preparation classes. From academic writing to speaking practice, we cover every aspect of the test."
+        )
+
+# Example: Generate and save HTML files
+pages = [ClassesPage(), PPTPage(), OETPage(), IELTSPage()]
+
+for page in pages:
+    with open(f"{page.title.replace(' ', '').lower()}.html", "w", encoding="utf-8") as file:
+        file.write(page.generate_html())
