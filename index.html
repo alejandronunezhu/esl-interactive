@@ -3,60 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ESL Interactive - PowerPoint lessons, OET, IELTS preparation, and general English classes">
-    <meta name="keywords" content="ESL, OET, IELTS, English Classes, PPT Lessons">
-    <meta name="author" content="ESL Interactive">
-    <title>ESL Interactive</title>
+    <title>ESL Interactive - Home</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap">
 </head>
 <body>
-
     <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="ppts.html">PPT Lessons</a></li>
-                <li><a href="classes.html">Classes</a></li>
-                <li><a href="oet.html">OET Preparation</a></li>
-                <li><a href="ielts.html">IELTS</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-        <img src="BANNER.jpg" alt="ESL Interactive Header Image">
+        <h1>Welcome to ESL Interactive</h1>
+        <p>Your gateway to mastering English for academic, professional, and personal success!</p>
     </header>
-
-    <div class="container">
-        <!-- Content as before -->
-    </div>
-
-    <footer>
-        <p>Follow us:</p>
-        <a href="https://www.facebook.com/ESLinteractive" target="_blank">Facebook</a>
-        <a href="https://www.twitter.com" target="_blank">Twitter</a>
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://www.youtube.com/@eslinteractive1648" target="_blank">YouTube</a>
-        <br>
-        <p>Contact us via email:</p>
-        <a href="mailto:fraser@eslinteractive.uk">fraser@eslinteractive.uk</a>
-        <br><br>
-        <p>&copy; 2024 ESL Interactive. All rights reserved.</p>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get all image elements
-            const images = document.querySelectorAll('.container .item img');
-
-            // Add click event to each image
-            images.forEach((image) => {
-                image.addEventListener('click', () => {
-                    const page = image.getAttribute('data-page');
-                    window.location.href = page; // Redirect to the corresponding page
-                });
-            });
-        });
-    </script>
-
-</body>
-</html>
+    <main class="homepage-container">
+        <div class="homepage-item">
+            <a href="classes.html">
+                <img src="images/CLASSES.jpg" alt="Classes with Fraser">
+                <h2>Classes with Fraser</h2>
+                <p>Interactive online classes tailored to your needs.</p>
+            </a>
+        </div>
+        <div class="homepage-item">
+            <a href="ppts.html">
+                <img src="images/PPTS.jpg" alt="PowerPoint Lessons">
+                <h2>PowerPoint Lessons</h2>
+                <p>Engaging, ready-to-use lessons on a variety of topics.</p>
+            </a>
+        </div>
+        <div class="homepage-item">
+            <a href="oet.html">
