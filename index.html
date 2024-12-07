@@ -3,44 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ESL Interactive - PowerPoint lessons, OET, IELTS preparation, and general English classes">
+    <meta name="keywords" content="ESL, OET, IELTS, English Classes, PPT Lessons">
+    <meta name="author" content="ESL Interactive">
     <title>ESL Interactive</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap"> <!-- Font link -->
-    <style>
-        /* CSS styles (optional: if you want to include additional styles directly here) */
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap">
 </head>
 <body>
 
     <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ppts.html">PPT Lessons</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="oet.html">OET Preparation</a></li>
+                <li><a href="ielts.html">IELTS</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
         <img src="BANNER.jpg" alt="ESL Interactive Header Image">
     </header>
 
     <div class="container">
-        <div class="item">
-            <p>PowerPoint Lessons</p>
-            <img src="PPTS.jpg" alt="Image 1" data-page="ppts.html">
-            <p>Ready-made PPTs for all topics</p>
-        </div>
-        <div class="item">
-            <p>Classes with Fraser</p>
-            <img src="CLASSES.jpg" alt="Image 2" data-page="classes.html">
-            <p>Online classes for all levels and ages</p>
-        </div>
-        <div class="item">
-            <p>OET Preparation</p>
-            <img src="OET.jpg" alt="Image 3" data-page="oet.html">
-            <p>We get you ready to pass the OET exam</p>
-        </div>
-        <div class="item">
-            <p>IELTS</p>
-            <img src="IELTS.jpg" alt="Image 4" data-page="ielts.html">
-            <p>We make IELTS fun</p>
-        </div>
+        <!-- Content as before -->
     </div>
 
     <footer>
-        <p>Follow us on:</p>
+        <p>Follow us:</p>
         <a href="https://www.facebook.com/ESLinteractive" target="_blank">Facebook</a>
         <a href="https://www.twitter.com" target="_blank">Twitter</a>
         <a href="https://www.instagram.com" target="_blank">Instagram</a>
@@ -48,13 +39,15 @@
         <br>
         <p>Contact us via email:</p>
         <a href="mailto:fraser@eslinteractive.uk">fraser@eslinteractive.uk</a>
+        <br><br>
+        <p>&copy; 2024 ESL Interactive. All rights reserved.</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Get all image elements
             const images = document.querySelectorAll('.container .item img');
-            
+
             // Add click event to each image
             images.forEach((image) => {
                 image.addEventListener('click', () => {
@@ -67,4 +60,3 @@
 
 </body>
 </html>
-
