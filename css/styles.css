@@ -94,3 +94,35 @@ footer {
   margin-top: 2rem;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
